@@ -6,9 +6,10 @@ module.exports = {
   },
   'extends': [
     'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
-    'plugin:@typescript-eslint/recommended'
+    'prettier',
   ],
   'overrides': [
   ],
@@ -24,7 +25,7 @@ module.exports = {
   'rules': {
     'indent': [
       'error',
-      2
+      2, { 'SwitchCase': 1 },
     ],
     'linebreak-style': [
       'error',
