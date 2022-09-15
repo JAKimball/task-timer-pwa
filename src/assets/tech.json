@@ -1,0 +1,256 @@
+[
+  {
+    "imageUrl": "/src/assets/babel.svg",
+    "imageAlt": "Babel logo",
+    "title": "Babel",
+    "message": "The compiler for writing next generation JavaScript",
+    "introUrl": "https://babeljs.io/",
+    "docsUrl": "https://babeljs.io/docs/en/"
+  },
+  {
+    "imageUrl": "/src/assets/bash-icon.svg",
+    "imageAlt": "Bash logo",
+    "title": "Bash",
+    "message": "A Unix shell and command language written by Brian Fox",
+    "introUrl": "https://www.gnu.org/software/bash/",
+    "docsUrl": "https://www.gnu.org/software/bash/manual/bash.html"
+  },
+  {
+    "imageUrl": "/src/assets/cloudflare.svg",
+    "imageAlt": "Cloudflare logo",
+    "title": "Cloudflare",
+    "message": "A web infrastructure and website security company",
+    "introUrl": "https://www.cloudflare.com/",
+    "docsUrl": "https://www.cloudflare.com/learning/"
+  },
+  {
+    "imageUrl": "/src/assets/cloudflare-workers.svg",
+    "imageAlt": "Cloudflare Workers logo",
+    "title": "Cloudflare Workers",
+    "message": "A serverless platform for creating entirely new applications",
+    "introUrl": "https://workers.cloudflare.com/",
+    "docsUrl": "https://developers.cloudflare.com/workers/"
+  },
+  {
+    "imageUrl": "/src/assets/css-3.svg",
+    "imageAlt": "CSS3 logo",
+    "title": "CSS3",
+    "message": "A style sheet language used for describing the presentation of a document written in a markup language"
+  },
+  {
+    "imageUrl": "/src/assets/esbuild.svg",
+    "imageAlt": "esbuild logo",
+    "title": "esbuild",
+    "message": "An extremely fast JavaScript bundler",
+    "introUrl": "https://esbuild.github.io/",
+    "docsUrl": "https://esbuild.github.io/getting-started/"
+  },
+  {
+    "imageUrl": "/src/assets/eslint.svg",
+    "imageAlt": "ESLint logo",
+    "title": "ESLint",
+    "message": "A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript",
+    "introUrl": "https://eslint.org/",
+    "docsUrl": "https://eslint.org/docs/user-guide/getting-started"
+  },
+  {
+    "imageUrl": "/src/assets/figma.svg",
+    "imageAlt": "Figma logo",
+    "title": "Figma",
+    "message": "A collaborative interface design tool",
+    "introUrl": "https://www.figma.com/",
+    "docsUrl": "https://www.figma.com/developers/docs"
+  },
+  {
+    "imageUrl": "/src/assets/git-icon.svg",
+    "imageAlt": "Git logo",
+    "title": "Git",
+    "message": "A free and open source distributed version control system"
+  },
+  {
+    "imageUrl": "/src/assets/github-icon.svg",
+    "imageAlt": "GitHub logo",
+    "title": "GitHub",
+    "message": "A code hosting platform for version control and collaboration"
+  },
+  {
+    "imageUrl": "/src/assets/html-5.svg",
+    "imageAlt": "HTML5 logo",
+    "title": "HTML5",
+    "message": "A markup language used for structuring and presenting content on the World Wide Web"
+  },
+  {
+    "imageUrl": "/src/assets/javascript.svg",
+    "imageAlt": "JavaScript logo",
+    "title": "JavaScript",
+    "message": "A high-level, interpreted programming language conforming to the ECMAScript specification"
+  },
+  {
+    "imageUrl": "/src/assets/jest.svg",
+    "imageAlt": "Jest logo",
+    "title": "Jest",
+    "message": "A delightful JavaScript Testing Framework with a focus on simplicity"
+  },
+  {
+    "imageUrl": "/src/assets/markdown.svg",
+    "imageAlt": "Markdown logo",
+    "title": "Markdown",
+    "message": "A lightweight markup language with plain text formatting syntax"
+  },
+  {
+    "imageUrl": "/src/assets/mdx.svg",
+    "imageAlt": "MDX logo",
+    "title": "MDX",
+    "message": "A JSX in Markdown for ambitious projects"
+  },
+  {
+    "imageUrl": "/src/assets/mongodb.svg",
+    "imageAlt": "MongoDB logo",
+    "title": "MongoDB",
+    "message": "A cross-platform document-oriented database program"
+  },
+  {
+    "imageUrl": "/src/assets/nodejs-icon.svg",
+    "imageAlt": "Node.js logo",
+    "title": "Node.js",
+    "message": "A JavaScript runtime built on Chrome’s V8 JavaScript engine"
+  },
+  {
+    "imageUrl": "/src/assets/npm.svg",
+    "imageAlt": "npm logo",
+    "title": "npm",
+    "message": "A package manager for the JavaScript programming language"
+  },
+  {
+    "imageUrl": "/src/assets/pnpm.svg",
+    "imageAlt": "pnpm logo",
+    "title": "pnpm",
+    "message": "A fast, disk space efficient package manager"
+  },
+  {
+    "imageUrl": "/src/assets/postcss.svg",
+    "imageAlt": "PostCSS logo",
+    "title": "PostCSS",
+    "message": "A tool for transforming CSS with JavaScript"
+  },
+  {
+    "imageUrl": "/src/assets/postgresql.svg",
+    "imageAlt": "PostgreSQL logo",
+    "title": "PostgreSQL",
+    "message": "A powerful, open source object-relational database system"
+  },
+  {
+    "imageUrl": "/src/assets/prettier.svg",
+    "imageAlt": "Prettier logo",
+    "title": "Prettier",
+    "message": "An opinionated code formatter"
+  },
+  {
+    "imageUrl": "/src/assets/react.svg",
+    "imageAlt": "React logo",
+    "title": "React",
+    "message": "A JavaScript library for building user interfaces",
+    "introUrl": "https://reactjs.org/",
+    "docsUrl": "https://reactjs.org/docs/getting-started.html"
+  },
+  {
+    "imageUrl": "/src/assets/render.svg",
+    "imageAlt": "Render logo",
+    "title": "Render",
+    "message": "A cloud platform for building, deploying, and automating modern web projects"
+  },
+  {
+    "imageUrl": "/src/assets/rollup.svg",
+    "imageAlt": "Rollup logo",
+    "title": "Rollup",
+    "message": "A module bundler for JavaScript"
+  },
+  {
+    "imageUrl": "/src/assets/rust.svg",
+    "imageAlt": "Rust logo",
+    "title": "Rust",
+    "message": "A systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety"
+  },
+  {
+    "imageUrl": "/src/assets/swc-bw.svg",
+    "imageAlt": "SWC logo",
+    "title": "SWC",
+    "message": "A super-fast JavaScript and TypeScript compiler",
+    "introUrl": "https://swc.rs/",
+    "docsUrl": "https://swc.rs/docs/"
+  },
+  {
+    "imageUrl": "/src/assets/tailwindcss-icon.svg",
+    "imageAlt": "Tailwind CSS logo",
+    "title": "Tailwind CSS",
+    "message": "A utility-first CSS framework for rapidly building custom designs",
+    "introUrl": "https://tailwindcss.com/",
+    "docsUrl": "https://tailwindcss.com/docs"
+  },
+  {
+    "imageUrl": "/src/assets/typescript-icon.svg",
+    "imageAlt": "TypeScript logo",
+    "title": "TypeScript",
+    "message": "An open-source language which builds on JavaScript"
+  },
+  {
+    "imageUrl": "/src/assets/ubuntu.svg",
+    "imageAlt": "Ubuntu logo",
+    "title": "Ubuntu",
+    "message": "An open source software operating system that runs from the desktop, to the cloud, to all your internet connected things"
+  },
+  {
+    "imageUrl": "/src/assets/v8.svg",
+    "imageAlt": "V8 logo",
+    "title": "V8",
+    "message": "Google’s open source high-performance JavaScript and WebAssembly engine"
+  },
+  {
+    "imageUrl": "/src/assets/visual-studio-code.svg",
+    "imageAlt": "Visual Studio Code logo",
+    "title": "Visual Studio Code",
+    "message": "A code editor redefined and optimized for building and debugging modern web and cloud applications"
+  },
+  {
+    "imageUrl": "/src/assets/vite.svg",
+    "imageAlt": "Vite logo",
+    "title": "Vite",
+    "message": "Next generation frontend tooling. It's fast!",
+    "introUrl": "https://vitejs.dev/",
+    "docsUrl": "https://vitejs.dev/guide/"
+  },
+  {
+    "imageUrl": "/src/assets/vitest.svg",
+    "imageAlt": "Vitest logo",
+    "title": "Vitest",
+    "message": "A Vite-native unit test framework. It's fast!",
+    "introUrl": "https://vitest.dev/",
+    "docsUrl": "https://vitest.dev/guide/"
+  },
+  {
+    "imageUrl": "/src/assets/webassembly.svg",
+    "imageAlt": "WebAssembly logo",
+    "title": "WebAssembly",
+    "message": "A binary instruction format for a stack-based virtual machine"
+  },
+  {
+    "imageUrl": "/src/assets/webpack.svg",
+    "imageAlt": "Webpack logo",
+    "title": "Webpack",
+    "message": "A static module bundler for modern JavaScript applications"
+  },
+  {
+    "imageUrl": "/src/assets/windicss.svg",
+    "imageAlt": "Windi CSS logo",
+    "title": "Windi CSS",
+    "message": "A utility-first CSS framework for rapid UI development"
+  },
+  {
+    "imageUrl": "/src/assets/yarn.svg",
+    "imageAlt": "Yarn logo",
+    "title": "Yarn",
+    "message": "A package manager that doubles down as project manager",
+    "introUrl": "https://yarnpkg.com/",
+    "docsUrl": "https://classic.yarnpkg.com/en/docs/"
+  }
+]
