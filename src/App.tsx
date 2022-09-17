@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 // import React from 'react'
-import { TechCarousel } from './tech-card'
+import { TechCarousel } from './components/tech-card'
 
 // import { useAutoAnimate } from '@formkit/auto-animate/react'
 

@@ -1,4 +1,4 @@
-import './App.css'
+import '../App.css'
 import { useState } from 'react'
 // import React from 'react'
 
@@ -70,14 +70,14 @@ function sortCards(Order: techListOrder): TechProps[] {
 export function TechCarousel() {
   const [order, setOrder] = useState(techListOrder.Random)
 
-  const [autoAnimateParent, autoAnimateEnabled] =
-    useAutoAnimate<HTMLDivElement>({
-      duration: 5000,
-    })
-  const [animating, setAnimating] = useState(true)
+  // const [autoAnimateParent, autoAnimateEnabled] =
+  //   useAutoAnimate<HTMLDivElement>({
+  //     duration: 5000,
+  //   })
+  const [animating, setAnimating] = useState(false)
   const toggleAnimation = () => {
     setAnimating(!animating)
-    autoAnimateEnabled(!animating)
+    // autoAnimateEnabled(!animating)
   }
 
   return (
@@ -99,7 +99,7 @@ export function TechCarousel() {
       </div>
       {/* render a list of cards here using the  component */}
       <div
-        ref={autoAnimateParent}
+        // ref={autoAnimateParent}
         className="flex flex-col md:flex-row flex-wrap space-y-4 md:space-y-0 md:space-x-4"
       >
         {sortCards(order).map((card) => (
