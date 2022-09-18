@@ -15,6 +15,12 @@
   - This is now in a separate .ts rather than .json file in order to ensure that the referenced images are included in the build
 - [ ] How could we tell vite build to include the assets referenced in the JSON file?
 
+```js
+// ./test/setup.ts
+import ResizeObserver from 'resize-observer-polyfill'
+global.ResizeObserver = ResizeObserver
+```
+
 ## Other
 
 - [x] Configure `prettier --write .` to run on commit
@@ -59,3 +65,25 @@ switch (foo) {
 - [x] Consider if should use, or are using, `lint-staged`
 - [ ] Consider if should use, or are using, `commitlint`
 - [ ] Consider if should use, or are using, `commitizen`
+
+## Checklist for template use
+
+- [ ] If you don't plan to use GitHub Actions, delete the `.github` directory.
+- [ ] Clean up the `cypress/integration/index.spec.ts` file.
+- [ ] Change the `favicon.png`, `apple-touch-icon.png`, `android-chrome-192x192.png` and `android-chrome-512x512.png`. [favicon.io](https://favicon.io) is a cool tool for generating these assets.
+- [ ] If you don't plan to use `react-query`, remove the query client logic in the `main.tsx` file.
+- [ ] Change the title, description and theme color in the `index.html` and `vite.config.ts`. [Inter font](https://rsms.me/inter/) is included, so remove it if you want.
+- [ ] Modify or delete the `LICENSE` file.
+- [ ] Change the `name` field in package.json.
+
+### Development
+
+Just run `npm dev`.
+
+### Production
+
+Run `npm build`. The generated files will be on the `dist` folder.
+
+### Testing
+
+Run `npm test`. Tests are performed on production build, so be sure to build your app first.

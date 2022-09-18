@@ -1,6 +1,0 @@
-name = "task-timer-pwa"
-main = "src/index.ts"
-compatibility_date = "2022-09-17"
-
-[site]
-bucket = "./dist" # <-- Add your build directory name here.

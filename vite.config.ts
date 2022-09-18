@@ -15,6 +15,31 @@ export default defineConfig({
       devOptions: {
         // enabled: true
       },
+      includeAssets: ['favicon.png', 'robots.txt', 'apple-touch-icon.png'],
+      manifest: {
+        name: 'Time Viewer',
+        short_name: 'Time Viewer',
+        description: 'A visual task timer for corner-of-the-eye time awareness',
+        theme_color: '#BD34FE',
+        icons: [
+          {
+            src: '/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: '/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable',
+          },
+        ],
+      },
     }),
   ],
   test: {

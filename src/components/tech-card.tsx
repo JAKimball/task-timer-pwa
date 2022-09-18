@@ -47,37 +47,26 @@ enum techListOrder {
 }
 
 function sortCards(Order: techListOrder): TechProps[] {
-  // switch (Order) {
-  //   case NotificationOrder.Random:
-  //     return randomizeNotifications()
-  //   case NotificationOrder.Ascending:
-  //     return notificationList.sort((a, b) => a.title.localeCompare(b.title))
-  //   case NotificationOrder.Descending:
-  //     return notificationList.sort((a, b) => b.title.localeCompare(a.title))
-  // }
-
   type SortFunction = (a: TechProps, b: TechProps) => number
-  const options: {
-    [key in techListOrder]: SortFunction | undefined
-  } = {
-    [techListOrder.Random]: () => Math.random() - 0.5,
-    [techListOrder.Ascending]: (a, b) => a.title.localeCompare(b.title),
-    [techListOrder.Descending]: (a, b) => b.title.localeCompare(a.title),
-  }
+  const options: SortFunction[] = [
+    () => Math.random() - 0.5, // Random
+    (a, b) => a.title.localeCompare(b.title), // Ascending
+    (a, b) => b.title.localeCompare(a.title), // Descending
+  ]
   return techList.sort(options[Order])
 }
 
 export function TechCarousel() {
   const [order, setOrder] = useState(techListOrder.Random)
 
-  // const [autoAnimateParent, autoAnimateEnabled] =
-  //   useAutoAnimate<HTMLDivElement>({
-  //     duration: 5000,
-  //   })
-  const [animating, setAnimating] = useState(false)
+  const [autoAnimateParent, autoAnimateEnabled] =
+    useAutoAnimate<HTMLDivElement>({
+      duration: 5000,
+    })
+  const [animating, setAnimating] = useState(true)
   const toggleAnimation = () => {
     setAnimating(!animating)
-    // autoAnimateEnabled(!animating)
+    autoAnimateEnabled(!animating)
   }
 
   return (
@@ -99,7 +88,7 @@ export function TechCarousel() {
       </div>
       {/* render a list of cards here using the  component */}
       <div
-        // ref={autoAnimateParent}
+        ref={autoAnimateParent}
         className="flex flex-col md:flex-row flex-wrap space-y-4 md:space-y-0 md:space-x-4"
       >
         {sortCards(order).map((card) => (
