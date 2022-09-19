@@ -7,6 +7,12 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    sourcemap: true,
+    rollupOptions: {
+      treeshake: 'recommended',
+    },
+  },
   plugins: [
     react(),
     // eslint-disable-next-line new-cap
@@ -15,12 +21,16 @@ export default defineConfig({
       devOptions: {
         // enabled: true
       },
+      strategies: 'generateSW',
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,png,jpg,gif,svg,woff2}'],
+      },
       includeAssets: ['favicon.png', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
         name: 'Time Viewer',
         short_name: 'Time Viewer',
         description: 'A visual task timer for corner-of-the-eye time awareness',
-        theme_color: '#BD34FE',
+        theme_color: '#fe8c3c',
         icons: [
           {
             src: '/android-chrome-192x192.png',
