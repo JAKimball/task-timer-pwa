@@ -37,6 +37,7 @@ import vitestLogo from '../assets/vitest.svg'
 import wasmLogo from '../assets/webassembly.svg'
 import webpackLogo from '../assets/webpack.svg'
 import windicssLogo from '../assets/windicss.svg'
+import workboxLogo from '../assets/workbox-color.svg'
 import yarnLogo from '../assets/yarn.svg'
 
 /**
@@ -363,6 +364,14 @@ export const techList: TechProps[] = [
     message: 'A utility-first CSS framework for rapid UI development',
     introUrl: 'https://windicss.org/',
     docsUrl: 'https://windicss.org/guide/',
+  },
+  {
+    title: 'Workbox',
+    imageUrl: workboxLogo,
+    imageAlt: 'Workbox logo',
+    message: 'A set of libraries and Node modules to help you build PWAs',
+    introUrl: 'https://developers.google.com/web/tools/workbox',
+    docsUrl: 'https://developers.google.com/web/tools/workbox/modules',
   },
   {
     title: 'Yarn',
