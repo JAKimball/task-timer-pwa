@@ -6,7 +6,10 @@ describe('Simple working test', () => {
   it('The title is visible', () => {
     render(<App />)
     expect(
-      screen.getByText(/Click on the Vite and React logos to learn more/i)
+      screen.getByText(/Tap the logos below to learn more/i)
+      // TODO: test for responsive text given mouse/pointer (fine) availability
+      // How should we mock the window.matchMedia() function?
+      // screen.getByText(/Click on the logos below to learn more/i)
     ).toBeInTheDocument()
   })
 
