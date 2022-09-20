@@ -50,7 +50,7 @@ export interface TechProps {
   title: string
   imageUrl: string
   imageAlt: string
-  message: string
+  description: string
   introUrl?: string // optional front page url for the tech
   docsUrl?: string // optional docs/getting started url for the tech
 }
@@ -60,7 +60,7 @@ export const techList: TechProps[] = [
     title: 'Babel',
     imageUrl: babelLogo,
     imageAlt: 'Babel logo',
-    message: 'The compiler for writing next generation JavaScript',
+    description: 'The compiler for writing next generation JavaScript',
     introUrl: 'https://babeljs.io/',
     docsUrl: 'https://babeljs.io/docs/en/',
   },
@@ -68,7 +68,7 @@ export const techList: TechProps[] = [
     title: 'Bash',
     imageUrl: bashLogo,
     imageAlt: 'Bash logo',
-    message: 'A Unix shell and command language written by Brian Fox',
+    description: 'A Unix shell and command language written by Brian Fox',
     introUrl: 'https://www.gnu.org/software/bash/',
     docsUrl: 'https://www.gnu.org/software/bash/manual/bash.html',
   },
@@ -76,7 +76,7 @@ export const techList: TechProps[] = [
     title: 'Cloudflare',
     imageUrl: cloudflareLogo,
     imageAlt: 'Cloudflare logo',
-    message: 'A web infrastructure and website security company',
+    description: 'A web infrastructure and website security company',
     introUrl: 'https://www.cloudflare.com/',
     docsUrl: 'https://www.cloudflare.com/learning/',
   },
@@ -84,7 +84,7 @@ export const techList: TechProps[] = [
     title: 'Cloudflare Workers',
     imageUrl: cloudflareWorkersLogo,
     imageAlt: 'Cloudflare Workers logo',
-    message: 'A serverless platform for creating entirely new applications',
+    description: 'A serverless platform for creating entirely new applications',
     introUrl: 'https://workers.cloudflare.com/',
     docsUrl: 'https://developers.cloudflare.com/workers/',
   },
@@ -92,7 +92,7 @@ export const techList: TechProps[] = [
     title: 'CSS3',
     imageUrl: css3Logo,
     imageAlt: 'CSS3 logo',
-    message:
+    description:
       'A style sheet language used for describing the presentation of a document written in a markup language',
     introUrl: 'https://www.w3.org/Style/CSS/Overview.en.html',
     docsUrl: 'https://www.w3.org/Style/CSS/Overview.en.html',
@@ -101,7 +101,7 @@ export const techList: TechProps[] = [
     title: 'esbuild',
     imageUrl: esbuildLogo,
     imageAlt: 'esbuild logo',
-    message: 'An extremely fast JavaScript bundler',
+    description: 'An extremely fast JavaScript bundler',
     introUrl: 'https://esbuild.github.io/',
     docsUrl: 'https://esbuild.github.io/getting-started/',
   },
@@ -109,7 +109,7 @@ export const techList: TechProps[] = [
     title: 'ESLint',
     imageUrl: eslintLogo,
     imageAlt: 'ESLint logo',
-    message:
+    description:
       'A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript',
     introUrl: 'https://eslint.org/',
     docsUrl: 'https://eslint.org/docs/user-guide/getting-started',
@@ -118,7 +118,7 @@ export const techList: TechProps[] = [
     title: 'Figma',
     imageUrl: figmaLogo,
     imageAlt: 'Figma logo',
-    message: 'A collaborative interface design tool',
+    description: 'A collaborative interface design tool',
     introUrl: 'https://www.figma.com/',
     docsUrl: 'https://www.figma.com/developers/docs',
   },
@@ -126,7 +126,7 @@ export const techList: TechProps[] = [
     title: 'Git',
     imageUrl: gitLogo,
     imageAlt: 'Git logo',
-    message: 'A free and open source distributed version control system',
+    description: 'A free and open source distributed version control system',
     introUrl: 'https://git-scm.com/',
     docsUrl: 'https://git-scm.com/doc',
   },
@@ -134,7 +134,8 @@ export const techList: TechProps[] = [
     title: 'GitHub',
     imageUrl: githubLogo,
     imageAlt: 'GitHub logo',
-    message: 'A code hosting platform for version control and collaboration',
+    description:
+      'A code hosting platform for version control and collaboration',
     introUrl: 'https://github.com/about',
     docsUrl: 'https://docs.github.com',
   },
@@ -142,7 +143,7 @@ export const techList: TechProps[] = [
     title: 'HTML5',
     imageUrl: html5Logo,
     imageAlt: 'HTML5 logo',
-    message:
+    description:
       'A markup language used for structuring and presenting content on the World Wide Web',
     introUrl: 'https://developer.mozilla.org/en-US/docs/Glossary/HTML5',
     docsUrl: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
@@ -151,7 +152,7 @@ export const techList: TechProps[] = [
     title: 'JavaScript',
     imageUrl: javascriptLogo,
     imageAlt: 'JavaScript logo',
-    message:
+    description:
       'A high-level, interpreted programming language conforming to the ECMAScript specification',
     introUrl: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     docsUrl: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide',
@@ -160,7 +161,7 @@ export const techList: TechProps[] = [
     title: 'Jest',
     imageUrl: jestLogo,
     imageAlt: 'Jest logo',
-    message:
+    description:
       'A delightful JavaScript Testing Framework with a focus on simplicity',
     introUrl: 'https://jestjs.io/',
     docsUrl: 'https://jestjs.io/docs/getting-started',
@@ -169,7 +170,8 @@ export const techList: TechProps[] = [
     title: 'Markdown',
     imageUrl: markdownLogo,
     imageAlt: 'Markdown logo',
-    message: 'A lightweight markup language with plain text formatting syntax',
+    description:
+      'A lightweight markup language with plain text formatting syntax',
     introUrl: 'https://daringfireball.net/projects/markdown/',
     docsUrl: 'https://www.markdownguide.org/getting-started/',
   },
@@ -177,7 +179,7 @@ export const techList: TechProps[] = [
     title: 'MDX',
     imageUrl: mdxLogo,
     imageAlt: 'MDX logo',
-    message: 'A JSX in Markdown for ambitious projects',
+    description: 'A JSX in Markdown for ambitious projects',
     introUrl: 'https://mdxjs.com/',
     docsUrl: 'https://mdxjs.com/getting-started',
   },
@@ -185,7 +187,7 @@ export const techList: TechProps[] = [
     title: 'MongoDB',
     imageUrl: mongodbLogo,
     imageAlt: 'MongoDB logo',
-    message: 'A cross-platform document-oriented database program',
+    description: 'A cross-platform document-oriented database program',
     introUrl: 'https://www.mongodb.com/',
     docsUrl: 'https://docs.mongodb.com/',
   },
@@ -193,7 +195,7 @@ export const techList: TechProps[] = [
     title: 'Node.js',
     imageUrl: nodejsLogo,
     imageAlt: 'Node.js logo',
-    message: 'A JavaScript runtime built on Chrome’s V8 JavaScript engine',
+    description: 'A JavaScript runtime built on Chrome’s V8 JavaScript engine',
     introUrl: 'https://nodejs.org/en/',
     docsUrl: 'https://nodejs.org/en/docs/',
   },
@@ -201,7 +203,7 @@ export const techList: TechProps[] = [
     title: 'npm',
     imageUrl: npmLogo,
     imageAlt: 'npm logo',
-    message: 'A package manager for the JavaScript programming language',
+    description: 'A package manager for the JavaScript programming language',
     introUrl: 'https://www.npmjs.com/',
     docsUrl: 'https://docs.npmjs.com/',
   },
@@ -209,7 +211,7 @@ export const techList: TechProps[] = [
     title: 'pnpm',
     imageUrl: pnpmLogo,
     imageAlt: 'pnpm logo',
-    message: 'A fast, disk space efficient package manager',
+    description: 'A fast, disk space efficient package manager',
     introUrl: 'https://pnpm.io/',
     docsUrl: 'https://pnpm.io/motivation',
   },
@@ -217,7 +219,7 @@ export const techList: TechProps[] = [
     title: 'PostCSS',
     imageUrl: postcssLogo,
     imageAlt: 'PostCSS logo',
-    message: 'A tool for transforming CSS with JavaScript',
+    description: 'A tool for transforming CSS with JavaScript',
     introUrl: 'https://postcss.org/',
     docsUrl: 'https://github.com/postcss/postcss#usage',
   },
@@ -225,7 +227,7 @@ export const techList: TechProps[] = [
     title: 'PostgreSQL',
     imageUrl: postgresqlLogo,
     imageAlt: 'PostgreSQL logo',
-    message: 'A powerful, open source object-relational database system',
+    description: 'A powerful, open source object-relational database system',
     introUrl: 'https://www.postgresql.org/',
     docsUrl: 'https://www.postgresql.org/docs/',
   },
@@ -233,7 +235,7 @@ export const techList: TechProps[] = [
     title: 'Prettier',
     imageUrl: prettierLogo,
     imageAlt: 'Prettier logo',
-    message: 'An opinionated code formatter',
+    description: 'An opinionated code formatter',
     introUrl: 'https://prettier.io/',
     docsUrl: 'https://prettier.io/docs/en/index.html',
   },
@@ -241,7 +243,7 @@ export const techList: TechProps[] = [
     title: 'React',
     imageUrl: reactLogo,
     imageAlt: 'React logo',
-    message: 'A JavaScript library for building user interfaces',
+    description: 'A JavaScript library for building user interfaces',
     introUrl: 'https://reactjs.org/',
     docsUrl: 'https://reactjs.org/docs/getting-started.html',
   },
@@ -249,7 +251,7 @@ export const techList: TechProps[] = [
     title: 'Render',
     imageUrl: renderLogo,
     imageAlt: 'Render logo',
-    message:
+    description:
       'A cloud platform for building, deploying, and automating modern web projects',
     introUrl: 'https://render.com/',
     docsUrl: 'https://render.com/docs',
@@ -258,7 +260,7 @@ export const techList: TechProps[] = [
     title: 'Rollup',
     imageUrl: rollupLogo,
     imageAlt: 'Rollup logo',
-    message: 'A module bundler for JavaScript',
+    description: 'A module bundler for JavaScript',
     introUrl: 'https://rollupjs.org/guide/',
     docsUrl: 'https://rollupjs.org/guide/',
   },
@@ -266,7 +268,7 @@ export const techList: TechProps[] = [
     title: 'Rust',
     imageUrl: rustLogo,
     imageAlt: 'Rust logo',
-    message:
+    description:
       'A systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety',
     introUrl: 'https://www.rust-lang.org/',
     docsUrl: 'https://doc.rust-lang.org/book/',
@@ -275,7 +277,7 @@ export const techList: TechProps[] = [
     title: 'SWC',
     imageUrl: swcLogo,
     imageAlt: 'SWC logo',
-    message: 'A super-fast JavaScript and TypeScript compiler',
+    description: 'A super-fast JavaScript and TypeScript compiler',
     introUrl: 'https://swc.rs/',
     docsUrl: 'https://swc.rs/docs/',
   },
@@ -283,7 +285,7 @@ export const techList: TechProps[] = [
     title: 'Tailwind CSS',
     imageUrl: tailwindcssLogo,
     imageAlt: 'Tailwind CSS logo',
-    message:
+    description:
       'A utility-first CSS framework for rapidly building custom designs',
     introUrl: 'https://tailwindcss.com/',
     docsUrl: 'https://tailwindcss.com/docs',
@@ -292,7 +294,7 @@ export const techList: TechProps[] = [
     title: 'TypeScript',
     imageUrl: typescriptLogo,
     imageAlt: 'TypeScript logo',
-    message: 'An open-source language which builds on JavaScript',
+    description: 'An open-source language which builds on JavaScript',
     introUrl: 'https://www.typescriptlang.org/',
     docsUrl: 'https://www.typescriptlang.org/docs/',
   },
@@ -300,7 +302,7 @@ export const techList: TechProps[] = [
     title: 'Ubuntu',
     imageUrl: ubuntuLogo,
     imageAlt: 'Ubuntu logo',
-    message:
+    description:
       'An open source software operating system that runs from the desktop, to the cloud, to all your internet connected things',
     introUrl: 'https://ubuntu.com/',
     docsUrl: 'https://ubuntu.com/tutorials',
@@ -309,7 +311,7 @@ export const techList: TechProps[] = [
     title: 'V8',
     imageUrl: v8Logo,
     imageAlt: 'V8 logo',
-    message:
+    description:
       'Google’s open source high-performance JavaScript and WebAssembly engine',
     introUrl: 'https://v8.dev/',
     docsUrl: 'https://v8.dev/docs',
@@ -318,7 +320,7 @@ export const techList: TechProps[] = [
     title: 'Visual Studio Code',
     imageUrl: vscodeLogo,
     imageAlt: 'Visual Studio Code logo',
-    message:
+    description:
       'A code editor redefined and optimized for building and debugging modern web and cloud applications',
     introUrl: 'https://code.visualstudio.com/',
     docsUrl: 'https://code.visualstudio.com/docs',
@@ -328,7 +330,7 @@ export const techList: TechProps[] = [
     imageUrl: viteLogo,
     imageAlt: 'Vite logo',
     // eslint-disable-next-line quotes
-    message: "Next generation frontend tooling. It's fast!",
+    description: "Next generation frontend tooling. It's fast!",
     introUrl: 'https://vitejs.dev/',
     docsUrl: 'https://vitejs.dev/guide/',
   },
@@ -337,7 +339,7 @@ export const techList: TechProps[] = [
     imageUrl: vitestLogo,
     imageAlt: 'Vitest logo',
     // eslint-disable-next-line quotes
-    message: "A Vite-native unit test framework. It's fast!",
+    description: "A Vite-native unit test framework. It's fast!",
     introUrl: 'https://vitest.dev/',
     docsUrl: 'https://vitest.dev/guide/',
   },
@@ -345,7 +347,8 @@ export const techList: TechProps[] = [
     title: 'WebAssembly',
     imageUrl: wasmLogo,
     imageAlt: 'WebAssembly logo',
-    message: 'A binary instruction format for a stack-based virtual machine',
+    description:
+      'A binary instruction format for a stack-based virtual machine',
     introUrl: 'https://webassembly.org/',
     docsUrl: 'https://webassembly.org/getting-started/developers-guide/',
   },
@@ -353,7 +356,7 @@ export const techList: TechProps[] = [
     title: 'Webpack',
     imageUrl: webpackLogo,
     imageAlt: 'Webpack logo',
-    message: 'A static module bundler for modern JavaScript applications',
+    description: 'A static module bundler for modern JavaScript applications',
     introUrl: 'https://webpack.js.org/',
     docsUrl: 'https://webpack.js.org/concepts/',
   },
@@ -361,7 +364,7 @@ export const techList: TechProps[] = [
     title: 'Windi CSS',
     imageUrl: windicssLogo,
     imageAlt: 'Windi CSS logo',
-    message: 'A utility-first CSS framework for rapid UI development',
+    description: 'A utility-first CSS framework for rapid UI development',
     introUrl: 'https://windicss.org/',
     docsUrl: 'https://windicss.org/guide/',
   },
@@ -369,7 +372,7 @@ export const techList: TechProps[] = [
     title: 'Workbox',
     imageUrl: workboxLogo,
     imageAlt: 'Workbox logo',
-    message: 'A set of libraries and Node modules to help you build PWAs',
+    description: 'A set of libraries and Node modules to help you build PWAs',
     introUrl: 'https://developers.google.com/web/tools/workbox',
     docsUrl: 'https://developers.google.com/web/tools/workbox/modules',
   },
@@ -377,7 +380,7 @@ export const techList: TechProps[] = [
     title: 'Yarn',
     imageUrl: yarnLogo,
     imageAlt: 'Yarn logo',
-    message: 'A package manager that doubles down as project manager',
+    description: 'A package manager that doubles down as project manager',
     introUrl: 'https://yarnpkg.com/',
     docsUrl: 'https://yarnpkg.com/getting-started',
   },

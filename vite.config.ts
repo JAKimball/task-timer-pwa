@@ -25,7 +25,9 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,png,jpg,gif,svg,woff2}'],
       },
-      includeAssets: ['favicon.png', 'robots.txt', 'apple-touch-icon.png'],
+      // TODO: Should we use favicon.svg? or favicon.png?
+      // Also, it's recommended to not pre-cache the favicon, but we need to think this through.
+      includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
         name: 'Time Viewer',
         short_name: 'Time Viewer',

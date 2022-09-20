@@ -10,12 +10,12 @@ export function TechCard({
   imageUrl,
   imageAlt,
   title,
-  message,
+  description,
   introUrl,
   docsUrl,
 }: TechProps): JSX.Element {
   return (
-    <div className="p-4 max-w-sm mx-auto bg-[#ffffffc9] hover:bg-slate-50 rounded-xl shadow-md hover:shadow-lg flex items-center space-x-4 cursor-pointer">
+    <div className="p-4 m-2 w-full overflow-hidden sm:w-5/12 lg:w-3/12 bg-[#ffffffc9] hover:bg-slate-50 rounded-xl shadow-md hover:shadow-lg flex items-center space-x-4 cursor-pointer">
       <div className="shrink-0">
         <a href={introUrl} target="_blank" rel="noopener noreferrer">
           <img className="cardLogo h-12 w-12" src={imageUrl} alt={imageAlt} />
@@ -30,15 +30,11 @@ export function TechCard({
         >
           {title}
         </a>
-        <p className="text-slate-500">{message}</p>
+        <p className="text-slate-500">{description}</p>
       </div>
     </div>
   )
 }
-
-// function randomizeNotifications(): NotificationProps[] {
-//   return notificationList.sort(() => Math.random() - 0.5)
-// }
 
 enum techListOrder {
   Random,
@@ -61,7 +57,7 @@ export function TechCarousel() {
 
   const [autoAnimateParent, autoAnimateEnabled] =
     useAutoAnimate<HTMLDivElement>({
-      duration: 5000,
+      duration: 3000,
     })
   const [animating, setAnimating] = useState(true)
   const toggleAnimation = () => {
@@ -72,15 +68,24 @@ export function TechCarousel() {
   return (
     <div className="App">
       {/* Sort Controls */}
-      <div className="flex flex-row space-x-2">
-        <button type="button" onClick={() => setOrder(techListOrder.Random)}>
+      <div className="flex flex-row space-x-2 gap-2 justify-center">
+        <button
+          type="button"
+          className={order === techListOrder.Random ? 'underline' : ''}
+          onClick={() => setOrder(techListOrder.Random)}
+        >
           Random
         </button>
-        <button type="button" onClick={() => setOrder(techListOrder.Ascending)}>
+        <button
+          type="button"
+          className={order === techListOrder.Ascending ? 'underline' : ''}
+          onClick={() => setOrder(techListOrder.Ascending)}
+        >
           Ascending
         </button>
         <button
           type="button"
+          className={order === techListOrder.Descending ? 'underline' : ''}
           onClick={() => setOrder(techListOrder.Descending)}
         >
           Descending
@@ -89,7 +94,8 @@ export function TechCarousel() {
       {/* render a list of cards here using the  component */}
       <div
         ref={autoAnimateParent}
-        className="flex flex-col md:flex-row flex-wrap space-y-4 md:space-y-0 md:space-x-4"
+        // className="flex flex-col md:flex-row flex-wrap space-y-4 md:space-y-0 md:space-x-4"
+        className="flex flex-wrap -mx-2 overflow-hidden justify-center"
       >
         {sortCards(order).map((card) => (
           <TechCard
@@ -97,7 +103,7 @@ export function TechCarousel() {
             imageUrl={card.imageUrl}
             imageAlt={card.imageAlt}
             title={card.title}
-            message={card.message}
+            description={card.description}
             introUrl={card.introUrl}
             docsUrl={card.docsUrl}
           />

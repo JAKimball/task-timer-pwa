@@ -3,7 +3,8 @@ import { useState } from 'react'
 // import React from 'react'
 import { TechCarousel } from './components/tech-card'
 
-// import { useAutoAnimate } from '@formkit/auto-animate/react'
+const isMouseAvailable = window.matchMedia('(pointer:fine)').matches
+const ifMouse = (a: unknown, b: unknown) => (isMouseAvailable ? a : b)
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,18 +27,20 @@ function App() {
       </h1>
       <h2 className="text-3xl font-bold underline">Hello world!</h2> */}
       <div className="card">
-        <button type="button" onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        {/* <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p> */}
+        <p className="read-the-docs">
+          <>
+            {ifMouse('Click on', 'Tap')} the logos below to learn more about the
+            technologies used in this project. <br />
+            Or {ifMouse('click on', 'tap')} any of the titles to go to the
+            &rdquo;getting started&ldquo; documentation.
+          </>
+        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
 
       <TechCarousel />
+      <button type="button" onClick={() => setCount((count) => count + 1)}>
+        count is {count}
+      </button>
     </div>
   )
 }

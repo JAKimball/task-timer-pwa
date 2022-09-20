@@ -1,8 +1,14 @@
+/* The @tailwind base directive includes all of the base styles, such as the default font family, font size, and font weight. The @tailwind components directive includes all of the pre-built components, such as buttons, forms, and tables. The @tailwind utilities directive includes all of the utility classes, such as .text-center and .bg-gray-200 . */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  --on: initial;
+  --off: ;
+  --dev-mode: var(--off);
+
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -17,6 +23,29 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+/* The following rule will enable element outlines on hover to assist durring development. 
+    To enable/disable, set the --dev-mode variable to var(--on)/var(--off) in the :root selector above. 
+
+    To enable/disable programmatically, use the following JavaScript:
+    document.documentElement.style.setProperty('--dev-mode', 'var(--on)'); 
+    document.documentElement.style.setProperty('--dev-mode', 'var(--off)');
+
+    If you are using Vite, you can use the following JavaScript to enable/disable 
+    the outlines depending on the current environment:
+    if (import.meta.env. DEV) { // (remoove the space before DEV)
+      document.documentElement.style.setProperty('--dev-mode', 'var(--on)');
+    } 
+
+    If you are using Webpack, you can use the following JavaScript to enable/disable 
+    the outlines depending on the current environment:
+    if (process.env. NODE_ENV === 'development') { // (remove the space before NODE_ENV)
+      document.documentElement.style.setProperty('--dev-mode', 'var(--on)');
+    }
+*/
+*:hover {
+  outline: var(--dev-mode, dashed 0.4rem rgba(195, 0, 255, 0.33));
 }
 
 a {
