@@ -57,7 +57,7 @@ export function TechCarousel() {
 
   const [autoAnimateParent, autoAnimateEnabled] =
     useAutoAnimate<HTMLDivElement>({
-      duration: 3000,
+      // duration: 3000,
     })
   const [animating, setAnimating] = useState(true)
   const toggleAnimation = () => {
