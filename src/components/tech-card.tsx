@@ -68,7 +68,7 @@ export function TechCarousel() {
   return (
     <div className="App">
       {/* Sort Controls */}
-      <div className="flex flex-row space-x-2 gap-2 justify-center">
+      <div className="flex flex-row flex-wrap space-x-2 gap-2 justify-center">
         <button
           type="button"
           className={order === techListOrder.Random ? 'underline' : ''}
