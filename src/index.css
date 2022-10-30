@@ -25,7 +25,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* The following rule will enable element outlines on hover to assist durring development. 
+/* The following rule will enable element outlines on hover to assist during development. 
     To enable/disable, set the --dev-mode variable to var(--on)/var(--off) in the :root selector above. 
 
     To enable/disable programmatically, use the following JavaScript:
@@ -34,7 +34,7 @@
 
     If you are using Vite, you can use the following JavaScript to enable/disable 
     the outlines depending on the current environment:
-    if (import.meta.env. DEV) { // (remoove the space before DEV)
+    if (import.meta.env. DEV) { // (remove the space before DEV)
       document.documentElement.style.setProperty('--dev-mode', 'var(--on)');
     } 
 
