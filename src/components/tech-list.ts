@@ -39,6 +39,7 @@ import webpackLogo from '../assets/webpack.svg'
 import windicssLogo from '../assets/windicss.svg'
 import workboxLogo from '../assets/workbox-color.svg'
 import yarnLogo from '../assets/yarn.svg'
+import threeJsLogo from '../assets/threejs.svg'
 
 /**
  * Structure of the tech list
@@ -134,8 +135,7 @@ export const techList: TechProps[] = [
     title: 'GitHub',
     imageUrl: githubLogo,
     imageAlt: 'GitHub logo',
-    description:
-      'A code hosting platform for version control and collaboration',
+    description: 'A code hosting platform for version control and collaboration',
     introUrl: 'https://github.com/about',
     docsUrl: 'https://docs.github.com',
   },
@@ -161,8 +161,7 @@ export const techList: TechProps[] = [
     title: 'Jest',
     imageUrl: jestLogo,
     imageAlt: 'Jest logo',
-    description:
-      'A delightful JavaScript Testing Framework with a focus on simplicity',
+    description: 'A delightful JavaScript Testing Framework with a focus on simplicity',
     introUrl: 'https://jestjs.io/',
     docsUrl: 'https://jestjs.io/docs/getting-started',
   },
@@ -170,8 +169,7 @@ export const techList: TechProps[] = [
     title: 'Markdown',
     imageUrl: markdownLogo,
     imageAlt: 'Markdown logo',
-    description:
-      'A lightweight markup language with plain text formatting syntax',
+    description: 'A lightweight markup language with plain text formatting syntax',
     introUrl: 'https://daringfireball.net/projects/markdown/',
     docsUrl: 'https://www.markdownguide.org/getting-started/',
   },
@@ -251,8 +249,7 @@ export const techList: TechProps[] = [
     title: 'Render',
     imageUrl: renderLogo,
     imageAlt: 'Render logo',
-    description:
-      'A cloud platform for building, deploying, and automating modern web projects',
+    description: 'A cloud platform for building, deploying, and automating modern web projects',
     introUrl: 'https://render.com/',
     docsUrl: 'https://render.com/docs',
   },
@@ -285,10 +282,18 @@ export const techList: TechProps[] = [
     title: 'Tailwind CSS',
     imageUrl: tailwindcssLogo,
     imageAlt: 'Tailwind CSS logo',
-    description:
-      'A utility-first CSS framework for rapidly building custom designs',
+    description: 'A utility-first CSS framework for rapidly building custom designs',
     introUrl: 'https://tailwindcss.com/',
     docsUrl: 'https://tailwindcss.com/docs',
+  },
+  {
+    title: 'three.js',
+    imageUrl: threeJsLogo,
+    imageAlt: 'three.js logo',
+    description:
+      'A cross-browser JavaScript library and Application Programming Interface used to create and display animated 3D computer graphics in a web browser',
+    introUrl: 'https://threejs.org/',
+    docsUrl: 'https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene',
   },
   {
     title: 'TypeScript',
@@ -311,8 +316,7 @@ export const techList: TechProps[] = [
     title: 'V8',
     imageUrl: v8Logo,
     imageAlt: 'V8 logo',
-    description:
-      'Google’s open source high-performance JavaScript and WebAssembly engine',
+    description: 'Google’s open source high-performance JavaScript and WebAssembly engine',
     introUrl: 'https://v8.dev/',
     docsUrl: 'https://v8.dev/docs',
   },
@@ -347,8 +351,7 @@ export const techList: TechProps[] = [
     title: 'WebAssembly',
     imageUrl: wasmLogo,
     imageAlt: 'WebAssembly logo',
-    description:
-      'A binary instruction format for a stack-based virtual machine',
+    description: 'A binary instruction format for a stack-based virtual machine',
     introUrl: 'https://webassembly.org/',
     docsUrl: 'https://webassembly.org/getting-started/developers-guide/',
   },
