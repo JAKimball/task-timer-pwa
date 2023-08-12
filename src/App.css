@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.tech-card {
+  user-select: none;
+  transition: background-color 0.2s ease-in-out;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -17,6 +21,35 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.card-logo {
+  will-change: filter;
+  transition: filter 0.5s ease-in-out;
+  filter: grayscale(100%);
+}
+
+/* .tech-card or a child has focus */
+.tech-card:focus-within .card-logo,
+.tech-card:hover .card-logo {
+  filter: grayscale(0%);
+}
+
+.tech-card-links {
+  overflow: hidden;
+  transition:
+    opacity 0.33s ease-in-out,
+    transform 0.33s ease-in-out,
+    max-height 0.33s ease-in-out;
+  opacity: 0;
+  transform: scaleY(0);
+  max-height: 0px;
+}
+
+.tech-card:focus-within .tech-card-links,
+.tech-card:hover .tech-card-links {
+  opacity: 1;
+  transform: scaleY(1);
+  max-height: 3rem;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -27,7 +60,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .cardLogo[alt='React logo'] {
+  .card-logo[alt='React logo'] {
     animation: logo-spin infinite 20s linear;
   }
 }

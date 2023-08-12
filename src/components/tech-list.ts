@@ -22,6 +22,9 @@ import postcssLogo from '../assets/postcss.svg'
 import postgresqlLogo from '../assets/postgresql.svg'
 import prettierLogo from '../assets/prettier.svg'
 import reactLogo from '../assets/react.svg'
+import reactRouterLogo from '../assets/react-router.svg'
+import reactSpringLogo from '../assets/react-spring.svg'
+// import reactThreeFiberLogo from '../assets/react-three-fiber.svg'
 import renderLogo from '../assets/render.svg'
 import rollupLogo from '../assets/rollup.svg'
 import rustLogo from '../assets/rust.svg'
@@ -42,6 +45,22 @@ import yarnLogo from '../assets/yarn.svg'
 import threeJsLogo from '../assets/threejs.svg'
 
 /**
+ * Tech list categories
+ *
+ * @export
+ * @enum {number}
+ */
+export enum TechCategory {
+  Frontend = 'Frontend',
+  Backend = 'Backend',
+  Edge = 'Edge',
+  DevOps = 'DevOps',
+  Design = 'Design',
+  Database = 'Database',
+  Other = 'Other',
+}
+
+/**
  * Structure of the tech list
  *
  * @interface TechProps
@@ -49,6 +68,7 @@ import threeJsLogo from '../assets/threejs.svg'
  */
 export interface TechProps {
   title: string
+  category?: TechCategory
   imageUrl: string
   imageAlt: string
   description: string
@@ -59,6 +79,7 @@ export interface TechProps {
 export const techList: TechProps[] = [
   {
     title: 'Babel',
+    category: TechCategory.Frontend,
     imageUrl: babelLogo,
     imageAlt: 'Babel logo',
     description: 'The compiler for writing next generation JavaScript',
@@ -67,6 +88,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Bash',
+    category: TechCategory.DevOps,
     imageUrl: bashLogo,
     imageAlt: 'Bash logo',
     description: 'A Unix shell and command language written by Brian Fox',
@@ -75,6 +97,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Cloudflare',
+    category: TechCategory.Edge,
     imageUrl: cloudflareLogo,
     imageAlt: 'Cloudflare logo',
     description: 'A web infrastructure and website security company',
@@ -83,6 +106,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Cloudflare Workers',
+    category: TechCategory.Edge,
     imageUrl: cloudflareWorkersLogo,
     imageAlt: 'Cloudflare Workers logo',
     description: 'A serverless platform for creating entirely new applications',
@@ -91,15 +115,17 @@ export const techList: TechProps[] = [
   },
   {
     title: 'CSS3',
+    category: TechCategory.Frontend,
     imageUrl: css3Logo,
     imageAlt: 'CSS3 logo',
     description:
       'A style sheet language used for describing the presentation of a document written in a markup language',
     introUrl: 'https://www.w3.org/Style/CSS/Overview.en.html',
-    docsUrl: 'https://www.w3.org/Style/CSS/Overview.en.html',
+    docsUrl: 'https://www.w3.org/Style/CSS/learning',
   },
   {
     title: 'esbuild',
+    category: TechCategory.Frontend,
     imageUrl: esbuildLogo,
     imageAlt: 'esbuild logo',
     description: 'An extremely fast JavaScript bundler',
@@ -108,6 +134,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'ESLint',
+    category: TechCategory.Frontend,
     imageUrl: eslintLogo,
     imageAlt: 'ESLint logo',
     description:
@@ -117,6 +144,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Figma',
+    category: TechCategory.Design,
     imageUrl: figmaLogo,
     imageAlt: 'Figma logo',
     description: 'A collaborative interface design tool',
@@ -125,6 +153,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Git',
+    category: TechCategory.DevOps,
     imageUrl: gitLogo,
     imageAlt: 'Git logo',
     description: 'A free and open source distributed version control system',
@@ -133,6 +162,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'GitHub',
+    category: TechCategory.DevOps,
     imageUrl: githubLogo,
     imageAlt: 'GitHub logo',
     description: 'A code hosting platform for version control and collaboration',
@@ -141,6 +171,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'HTML5',
+    category: TechCategory.Frontend,
     imageUrl: html5Logo,
     imageAlt: 'HTML5 logo',
     description:
@@ -150,6 +181,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'JavaScript',
+    category: TechCategory.Frontend,
     imageUrl: javascriptLogo,
     imageAlt: 'JavaScript logo',
     description:
@@ -159,6 +191,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Jest',
+    category: TechCategory.DevOps,
     imageUrl: jestLogo,
     imageAlt: 'Jest logo',
     description: 'A delightful JavaScript Testing Framework with a focus on simplicity',
@@ -167,6 +200,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Markdown',
+    category: TechCategory.Other,
     imageUrl: markdownLogo,
     imageAlt: 'Markdown logo',
     description: 'A lightweight markup language with plain text formatting syntax',
@@ -175,6 +209,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'MDX',
+    category: TechCategory.Frontend,
     imageUrl: mdxLogo,
     imageAlt: 'MDX logo',
     description: 'A JSX in Markdown for ambitious projects',
@@ -183,6 +218,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'MongoDB',
+    category: TechCategory.Database,
     imageUrl: mongodbLogo,
     imageAlt: 'MongoDB logo',
     description: 'A cross-platform document-oriented database program',
@@ -191,6 +227,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Node.js',
+    category: TechCategory.Backend,
     imageUrl: nodejsLogo,
     imageAlt: 'Node.js logo',
     description: 'A JavaScript runtime built on Chrome’s V8 JavaScript engine',
@@ -199,6 +236,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'npm',
+    category: TechCategory.DevOps,
     imageUrl: npmLogo,
     imageAlt: 'npm logo',
     description: 'A package manager for the JavaScript programming language',
@@ -207,6 +245,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'pnpm',
+    category: TechCategory.DevOps,
     imageUrl: pnpmLogo,
     imageAlt: 'pnpm logo',
     description: 'A fast, disk space efficient package manager',
@@ -215,6 +254,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'PostCSS',
+    category: TechCategory.Frontend,
     imageUrl: postcssLogo,
     imageAlt: 'PostCSS logo',
     description: 'A tool for transforming CSS with JavaScript',
@@ -223,6 +263,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'PostgreSQL',
+    category: TechCategory.Database,
     imageUrl: postgresqlLogo,
     imageAlt: 'PostgreSQL logo',
     description: 'A powerful, open source object-relational database system',
@@ -231,6 +272,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Prettier',
+    category: TechCategory.DevOps,
     imageUrl: prettierLogo,
     imageAlt: 'Prettier logo',
     description: 'An opinionated code formatter',
@@ -239,14 +281,44 @@ export const techList: TechProps[] = [
   },
   {
     title: 'React',
+    category: TechCategory.Frontend,
     imageUrl: reactLogo,
     imageAlt: 'React logo',
     description: 'A JavaScript library for building user interfaces',
-    introUrl: 'https://reactjs.org/',
-    docsUrl: 'https://reactjs.org/docs/getting-started.html',
+    introUrl: 'https://react.dev/',
+    docsUrl: 'https://react.dev/learn',
   },
   {
+    title: 'React Router',
+    category: TechCategory.Frontend,
+    imageUrl: reactRouterLogo,
+    imageAlt: 'React Router logo',
+    description:
+      'A collection of navigational components to declaratively enable client side routing',
+    introUrl: 'https://reactrouter.com/',
+    docsUrl: 'https://reactrouter.com/en/main/start/tutorial',
+  },
+  {
+    title: 'React Spring',
+    category: TechCategory.Frontend,
+    imageUrl: reactSpringLogo,
+    imageAlt: 'React Spring logo',
+    description: 'A spring-physics based animation library for React',
+    introUrl: 'https://www.react-spring.io/',
+    docsUrl: 'https://www.react-spring.io/docs',
+  },
+  // {
+  //   title: 'React Three Fiber',
+  //   category: TechCategory.Frontend,
+  //   imageUrl: reactThreeFiberLogo,
+  //   imageAlt: 'React Three Fiber logo',
+  //   description: 'A React renderer for Three.js',
+  //   introUrl: 'https://docs.pmnd.rs/react-three-fiber/getting-started/introduction',
+  //   docsUrl: 'https://docs.pmnd.rs/react-three-fiber/getting-started/introduction',
+  // },
+  {
     title: 'Render',
+    category: TechCategory.Backend,
     imageUrl: renderLogo,
     imageAlt: 'Render logo',
     description: 'A cloud platform for building, deploying, and automating modern web projects',
@@ -255,14 +327,16 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Rollup',
+    category: TechCategory.Frontend,
     imageUrl: rollupLogo,
     imageAlt: 'Rollup logo',
     description: 'A module bundler for JavaScript',
-    introUrl: 'https://rollupjs.org/guide/',
-    docsUrl: 'https://rollupjs.org/guide/',
+    introUrl: 'https://rollupjs.org',
+    docsUrl: 'https://rollupjs.org/introduction',
   },
   {
     title: 'Rust',
+    category: TechCategory.Other,
     imageUrl: rustLogo,
     imageAlt: 'Rust logo',
     description:
@@ -272,6 +346,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'SWC',
+    category: TechCategory.Frontend,
     imageUrl: swcLogo,
     imageAlt: 'SWC logo',
     description: 'A super-fast JavaScript and TypeScript compiler',
@@ -280,6 +355,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Tailwind CSS',
+    category: TechCategory.Frontend,
     imageUrl: tailwindcssLogo,
     imageAlt: 'Tailwind CSS logo',
     description: 'A utility-first CSS framework for rapidly building custom designs',
@@ -288,15 +364,17 @@ export const techList: TechProps[] = [
   },
   {
     title: 'three.js',
+    category: TechCategory.Frontend,
     imageUrl: threeJsLogo,
     imageAlt: 'three.js logo',
     description:
-      'A cross-browser JavaScript library and Application Programming Interface used to create and display animated 3D computer graphics in a web browser',
+      'A cross-browser JavaScript library to create and display animated 3D computer graphics in a web browser',
     introUrl: 'https://threejs.org/',
     docsUrl: 'https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene',
   },
   {
     title: 'TypeScript',
+    category: TechCategory.Frontend,
     imageUrl: typescriptLogo,
     imageAlt: 'TypeScript logo',
     description: 'An open-source language which builds on JavaScript',
@@ -305,6 +383,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Ubuntu',
+    category: TechCategory.DevOps,
     imageUrl: ubuntuLogo,
     imageAlt: 'Ubuntu logo',
     description:
@@ -314,6 +393,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'V8',
+    category: TechCategory.Other,
     imageUrl: v8Logo,
     imageAlt: 'V8 logo',
     description: 'Google’s open source high-performance JavaScript and WebAssembly engine',
@@ -322,6 +402,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Visual Studio Code',
+    category: TechCategory.DevOps,
     imageUrl: vscodeLogo,
     imageAlt: 'Visual Studio Code logo',
     description:
@@ -331,6 +412,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Vite',
+    category: TechCategory.Frontend,
     imageUrl: viteLogo,
     imageAlt: 'Vite logo',
     // eslint-disable-next-line quotes
@@ -340,6 +422,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Vitest',
+    category: TechCategory.DevOps,
     imageUrl: vitestLogo,
     imageAlt: 'Vitest logo',
     // eslint-disable-next-line quotes
@@ -349,6 +432,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'WebAssembly',
+    category: TechCategory.Other,
     imageUrl: wasmLogo,
     imageAlt: 'WebAssembly logo',
     description: 'A binary instruction format for a stack-based virtual machine',
@@ -357,6 +441,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Webpack',
+    category: TechCategory.Frontend,
     imageUrl: webpackLogo,
     imageAlt: 'Webpack logo',
     description: 'A static module bundler for modern JavaScript applications',
@@ -365,6 +450,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Windi CSS',
+    category: TechCategory.Frontend,
     imageUrl: windicssLogo,
     imageAlt: 'Windi CSS logo',
     description: 'A utility-first CSS framework for rapid UI development',
@@ -373,6 +459,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Workbox',
+    category: TechCategory.Frontend,
     imageUrl: workboxLogo,
     imageAlt: 'Workbox logo',
     description: 'A set of libraries and Node modules to help you build PWAs',
@@ -381,6 +468,7 @@ export const techList: TechProps[] = [
   },
   {
     title: 'Yarn',
+    category: TechCategory.DevOps,
     imageUrl: yarnLogo,
     imageAlt: 'Yarn logo',
     description: 'A package manager that doubles down as project manager',

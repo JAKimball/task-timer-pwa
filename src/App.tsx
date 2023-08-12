@@ -1,10 +1,12 @@
 import './App.css'
+
 import { useState } from 'react'
 // import React from 'react'
 import { TechCarousel } from './components/tech-card'
 
-const isMouseAvailable = window.matchMedia('(pointer:fine)').matches
-const ifMouse = (a: unknown, b: unknown) => (isMouseAvailable ? a : b)
+// Do we have a mouse available?
+// const isMouseAvailable = window.matchMedia('(pointer:fine)').matches
+// const ifMouse = (a: unknown, b: unknown) => (isMouseAvailable ? a : b)
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,17 +30,13 @@ function App() {
       <h2 className="text-3xl font-bold underline">Hello world!</h2> */}
       <div className="card">
         <p className="read-the-docs">
-          <>
-            {ifMouse('Click on', 'Tap')} the logos below to learn more about the
-            technologies used in this project. <br />
-            Or {ifMouse('click on', 'tap')} any of the titles to go to the
-            &rdquo;getting started&ldquo; documentation.
-          </>
+          Below is sampling of some of the technologies used in this project. <br />
+          Select a technology to learn more about it.
         </p>
       </div>
 
       <TechCarousel />
-      <button type="button" onClick={() => setCount((count) => count + 1)}>
+      <button type="button" onClick={() => setCount(count => count + 1)}>
         count is {count}
       </button>
     </div>

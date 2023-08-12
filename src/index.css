@@ -9,14 +9,15 @@
   --off: ;
   --dev-mode: var(--off);
 
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color-scheme: light; */
+  color: #213547;
+  background-color: #dddddd;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -54,7 +55,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #747bff;
 }
 
 body {
@@ -63,6 +64,21 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #3cd2d2;
+  background: linear-gradient(
+    to bottom,
+    #3cd2d2 0,
+    #b4f0f0 10.22%,
+    #f0fa96 24%,
+    #f0fa96 28%,
+    #3cd2d2 43%,
+    #3cd2d2 57.25%,
+    #00505a 76%,
+    #00505a 80%,
+    #3cd2d2 90%,
+    #96b9b9 95%,
+    #96b9b9 100%
+  );
 }
 
 h1 {
@@ -77,8 +93,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
+  background-color: #f9f9f9;
   transition: border-color 0.25s;
 }
 button:hover {
@@ -89,15 +105,36 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    /* color-scheme: dark; */
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  }
+  body {
+    background-color: #195353;
+    background: linear-gradient(
+      to bottom,
+      #1c6666 0,
+      #4e6969 10.22%,
+      #60643c 24%,
+      #5d613e 28%,
+      #1a5e5e 43%,
+      #113f3f 57.25%,
+      #00272c 76%,
+      #00333a 80%,
+      #1e6969 90%,
+      #293333 95%,
+      #212727 100%
+    );
+  }
+  a {
+    color: #3d45dd;
   }
   a:hover {
-    color: #747bff;
+    color: #535bf2;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #1a1a1a;
   }
 }

@@ -87,3 +87,64 @@ Run `npm build`. The generated files will be on the `dist` folder.
 ### Testing
 
 Run `npm test`. Tests are performed on production build, so be sure to build your app first.
+
+## Development Questions, Answers, and Ideas
+
+### Q & A
+
+#### Q: CSS is present in both index.css and App.css. Why? How should CSS be organized?
+
+A: index.css is global CSS, and App.css is component-specific CSS. This is a good pattern to follow.
+
+---
+
+#### Q: In this React project, how do we get the CSS to be applied to the HTML?
+
+A: The CSS is imported into the JS, and the JS is imported into the HTML.
+
+---
+
+#### Q: This project does not currently produce a site that renders on a Kindle e-reader. How can we fix this?
+
+A: We can add a `viewport` meta tag to the HTML.
+
+---
+
+#### Q: Why do we have both a main.tsx and an App.tsx? Should they be consolidated? Why or why not?
+
+A: The main.tsx is the entry point for the app, and the App.tsx is the root component.
+
+---
+
+#### Q: What are some examples of what should be in the main.tsx and what should be in the App.tsx?
+
+A: The main.tsx should contain the router, the query client, and the theme provider. The App.tsx should contain the header, footer, and main content.
+
+---
+
+#### Q: Please enumerate the options for adding a Google font to the project
+
+A: We can add a `link` tag to the HTML, or we can import the font in the JS.
+
+---
+
+#### Q: What is the difference between a `link` tag and an `import` statement when adding a Google font to the project?
+
+A: The `link` tag is added to the HTML, and the `import` statement is added to the JS.
+
+---
+
+#### Q: We are using some Google fonts in this project. How do we ensure the fonts are properly cached by the PWA service worker in order to be available offline?
+
+A: We can add a `link` tag to the HTML, and we can add a `cache.match` to the service worker.
+
+The `cache.match` looks like this:
+
+```js
+const cache = await caches.open('google-fonts-webfonts-v1')
+const cachedResponse = await cache.match(event.request)
+```
+
+---
+
+### Ideas
