@@ -1,7 +1,6 @@
 import './App.css'
 
 import { useState } from 'react'
-// import React from 'react'
 import { TechCarousel } from './components/tech-card'
 
 // Do we have a mouse available?
@@ -30,8 +29,8 @@ function App() {
       <h2 className="text-3xl font-bold underline">Hello world!</h2> */}
       <div className="card">
         <p className="read-the-docs">
-          Below is sampling of some of the technologies used in this project. <br />
-          Select a technology to learn more about it.
+          Below is sampling of some of the technologies used in these projects. <br />
+          Select a technology to learn more.
         </p>
       </div>
 
