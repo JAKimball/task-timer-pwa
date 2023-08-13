@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/stylistic',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'prettier',
@@ -19,10 +20,8 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
-    indent: ['error', 2, { SwitchCase: 1 }],
-    'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
-    semi: ['error', 'never'],
+    'logical-assignment-operators': 'error',
+    // indent: ['error', 2, { SwitchCase: 1 }],  // Attempting better switch/case layout, but conflicts with prettier
   },
   settings: {
     react: {
