@@ -1,10 +1,8 @@
 import { techList } from './tech-list'
 import { describe, expect, it } from 'vitest'
 
-// import urlRegex from 'url-regex'
-
 // Verify introUrl and DocsUrl are for each tech is either undefined or a valid URL format.
-// If URL formats are valid, test that the URLs are reachable and return a 200 status code.
+// Test that the URLs are reachable and return a 200 status code.
 // For each failed test, report the name of the tech that failed and the URL that failed.
 
 // fetch test always fails for the following URLs so they are excluded from the test:
@@ -15,7 +13,6 @@ describe('tech-list', () => {
   //   const techListWithUrls = techList.filter(tech => tech.introUrl || tech.docsUrl)
   //   for (const tech of techListWithUrls) {
   //     if (tech.introUrl && !excludedUrls.includes(tech.introUrl)) {
-  //       expect(tech.introUrl).toMatch(urlRegex({ exact: true }))
   //       const response = await fetch(tech.introUrl)
   //       if (response.status !== 200) {
   //         console.log('Failed to resolve introUrl:', tech.introUrl, 'for tech:', tech.title)
@@ -23,7 +20,6 @@ describe('tech-list', () => {
   //       expect(response.status).toBe(200)
   //     }
   //     if (tech.docsUrl && !excludedUrls.includes(tech.docsUrl)) {
-  //       expect(tech.docsUrl).toMatch(urlRegex({ exact: true }))
   //       const response = await fetch(tech.docsUrl)
   //       if (response.status !== 200) {
   //         console.log('Failed to resolve docsUrl:', tech.docsUrl, 'for tech:', tech.title)
@@ -40,7 +36,7 @@ describe('tech-list', () => {
 
   // T-56 This test does not properly fail when a fetch fails. It passes even when a fetch fails. This is apparently a bug in vitest. See if this is fixed in a later version of vitest. It may have to do with the use of Promise.allSettled(). See if it properly reports failed fetches when using Promise.all() instead of Promise.allSettled().
   it('should have valid URLs', async () => {
-    const techListWithUrls = techList.filter(tech => tech.introUrl || tech.docsUrl)
+    const techListWithUrls = techList.filter(tech => tech.introUrl ?? tech.docsUrl)
     const fetches = []
     for (const tech of techListWithUrls) {
       if (tech.introUrl && !excludedUrls.includes(tech.introUrl)) {
