@@ -2,6 +2,9 @@
 
 ## Todo
 
+- [ ] Can ToDo Tree read into package.json?
+- [ ] Review package.json devDependencies-comments for accuracy and completeness.
+- [ ] Review packages reported by knip to see if they are still needed.
 - [x] Add auto-animate
 - [x] Use alt attribute selector to spin all react logos
 - [ ] Add deploy and preview branches (how do Netlify previews work?)
