@@ -1,6 +1,7 @@
 import './App.css'
 
 import { useState } from 'react'
+import { ErrorBoundary } from 'react-error-boundary'
 import { TechCarousel } from './components/tech-card'
 
 // Do we have a mouse available?
@@ -34,7 +35,9 @@ function App() {
         </p>
       </div>
 
-      <TechCarousel />
+      <ErrorBoundary fallback={<p>Something went wrong</p>}>
+        <TechCarousel />
+      </ErrorBoundary>
       <button type="button" onClick={() => setCount(count => count + 1)}>
         count is {count}
       </button>

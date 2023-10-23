@@ -5,6 +5,7 @@ import { useMemo, useState } from 'react'
 import { TechProps, TechCategory, techList } from './tech-list'
 
 import { useAutoAnimate } from '@formkit/auto-animate/react'
+import { ErrorBoundary } from 'react-error-boundary'
 
 export function TechCard({
   imageUrl,
@@ -105,80 +106,84 @@ export function TechCarousel() {
     <div className="App">
       {/* Sort/Filter Controls */}
 
-      {/* By Category */}
-      <button type="button" onClick={() => setDisplayCategories(!displayCategories)}>
-        {displayCategories ? '🚫 Hide' : '✅ Show'} Categories
-      </button>
+      <ErrorBoundary fallback={<p>Something went wrong with the sort controls</p>}>
+        {/* By Category */}
+        <button type="button" onClick={() => setDisplayCategories(!displayCategories)}>
+          {displayCategories ? '🚫 Hide' : '✅ Show'} Categories
+        </button>
 
-      {/* Sort Order */}
-      <div className="flex flex-row flex-wrap space-x-2 gap-2 justify-center">
-        <button
-          type="button"
-          className={order === techListOrder.Random ? 'underline' : ''}
-          onClick={() => setOrder(techListOrder.Random)}
-        >
-          Random
-        </button>
-        <button
-          type="button"
-          className={order === techListOrder.Ascending ? 'underline' : ''}
-          onClick={() => setOrder(techListOrder.Ascending)}
-        >
-          Ascending
-        </button>
-        <button
-          type="button"
-          className={order === techListOrder.Descending ? 'underline' : ''}
-          onClick={() => setOrder(techListOrder.Descending)}
-        >
-          Descending
-        </button>
-      </div>
+        {/* Sort Order */}
+        <div className="flex flex-row flex-wrap space-x-2 gap-2 justify-center">
+          <button
+            type="button"
+            className={order === techListOrder.Random ? 'underline' : ''}
+            onClick={() => setOrder(techListOrder.Random)}
+          >
+            Random
+          </button>
+          <button
+            type="button"
+            className={order === techListOrder.Ascending ? 'underline' : ''}
+            onClick={() => setOrder(techListOrder.Ascending)}
+          >
+            Ascending
+          </button>
+          <button
+            type="button"
+            className={order === techListOrder.Descending ? 'underline' : ''}
+            onClick={() => setOrder(techListOrder.Descending)}
+          >
+            Descending
+          </button>
+        </div>
+      </ErrorBoundary>
 
       <button type="button" onClick={() => toggleAnimation()}>
         {animating ? '🚫 Disable' : '✅ Enable'} animations
       </button>
       {/* render a list of cards here using the component */}
-      <div
-        ref={autoAnimateParent}
-        // className="flex flex-col md:flex-row flex-wrap space-y-4 md:space-y-0 md:space-x-4"
-        className="flex flex-wrap -mx-2 overflow-hidden justify-center"
-      >
-        {displayCategories
-          ? categories.map(category => (
-              <div key={category} className="w-full justify-center">
-                <h2 className="text-2xl font-bold">{category}</h2>
-                <div className="flex flex-wrap overflow-hidden justify-center">
-                  {sortCards(order).map(card => {
-                    if (card.category === category) {
-                      return (
-                        <TechCard
-                          key={card.title}
-                          imageUrl={card.imageUrl}
-                          imageAlt={card.imageAlt}
-                          title={card.title}
-                          description={card.description}
-                          introUrl={card.introUrl}
-                          docsUrl={card.docsUrl}
-                        />
-                      )
-                    }
-                  })}
+      <ErrorBoundary fallback={<p>Something went wrong with the Tech Carousel</p>}>
+        <div
+          ref={autoAnimateParent}
+          // className="flex flex-col md:flex-row flex-wrap space-y-4 md:space-y-0 md:space-x-4"
+          className="flex flex-wrap -mx-2 overflow-hidden justify-center"
+        >
+          {displayCategories
+            ? categories.map(category => (
+                <div key={category} className="w-full justify-center">
+                  <h2 className="text-2xl font-bold">{category}</h2>
+                  <div className="flex flex-wrap overflow-hidden justify-center">
+                    {sortCards(order).map(card => {
+                      if (card.category === category) {
+                        return (
+                          <TechCard
+                            key={card.title}
+                            imageUrl={card.imageUrl}
+                            imageAlt={card.imageAlt}
+                            title={card.title}
+                            description={card.description}
+                            introUrl={card.introUrl}
+                            docsUrl={card.docsUrl}
+                          />
+                        )
+                      }
+                    })}
+                  </div>
                 </div>
-              </div>
-            ))
-          : sortCards(order).map(card => (
-              <TechCard
-                key={card.title}
-                imageUrl={card.imageUrl}
-                imageAlt={card.imageAlt}
-                title={card.title}
-                description={card.description}
-                introUrl={card.introUrl}
-                docsUrl={card.docsUrl}
-              />
-            ))}
-      </div>
+              ))
+            : sortCards(order).map(card => (
+                <TechCard
+                  key={card.title}
+                  imageUrl={card.imageUrl}
+                  imageAlt={card.imageAlt}
+                  title={card.title}
+                  description={card.description}
+                  introUrl={card.introUrl}
+                  docsUrl={card.docsUrl}
+                />
+              ))}
+        </div>
+      </ErrorBoundary>
     </div>
   )
 }
