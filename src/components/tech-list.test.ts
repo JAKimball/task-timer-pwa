@@ -34,7 +34,7 @@ describe('tech-list', () => {
   // We do this by creating an array of fetches for each tech that has URLs.
   // Then we use Promise.allSettled() to run all the fetches in parallel.
 
-  // T-56 This test does not properly fail when a fetch fails. It passes even when a fetch fails. This is apparently a bug in vitest. See if this is fixed in a later version of vitest. It may have to do with the use of Promise.allSettled(). See if it properly reports failed fetches when using Promise.all() instead of Promise.allSettled().
+  // TODO(T-56): This test does not properly fail when a fetch fails. It passes even when a fetch fails. This is apparently a bug in vitest. See if this is fixed in a later version of vitest. It may have to do with the use of Promise.allSettled(). See if it properly reports failed fetches when using Promise.all() instead of Promise.allSettled().
   it('should have valid URLs', async () => {
     const techListWithUrls = techList.filter(tech => tech.introUrl ?? tech.docsUrl)
     const fetches = []
@@ -43,7 +43,7 @@ describe('tech-list', () => {
         fetches.push(
           fetch(tech.introUrl).then(response => {
             if (response.status !== 200) {
-              console.log('Failed to resolve introUrl:', tech.introUrl, 'for tech:', tech.title)
+              console.error('Failed to resolve introUrl:', tech.introUrl, 'for tech:', tech.title)
             }
             expect(response.status).toBe(200)
           })
@@ -53,7 +53,7 @@ describe('tech-list', () => {
         fetches.push(
           fetch(tech.docsUrl).then(response => {
             if (response.status !== 200) {
-              console.log('Failed to resolve docsUrl:', tech.docsUrl, 'for tech:', tech.title)
+              console.error('Failed to resolve docsUrl:', tech.docsUrl, 'for tech:', tech.title)
             }
             expect(response.status).toBe(200)
           })

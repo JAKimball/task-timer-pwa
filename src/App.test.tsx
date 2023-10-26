@@ -7,7 +7,7 @@ describe('Simple working test', () => {
     render(<App />)
     expect(
       screen.getByText(/Select a technology to learn more/i)
-      // T-55 test for responsive text given mouse/pointer (fine) availability
+      // TODO(T-55): test for responsive text given mouse/pointer (fine) availability
       // How should we mock the window.matchMedia() function?
       // screen.getByText(/Click on the logos below to learn more/i)
     ).toBeInTheDocument()
