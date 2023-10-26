@@ -62,5 +62,6 @@ export default defineConfig({
     // since parsing CSS is slow
     css: true,
     testTimeout: 30000,
+    reporters: ['default', 'hanging-process'],
   },
 })
