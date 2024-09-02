@@ -1,22 +1,16 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "baseUrl": "./",
-    "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": ["src", ".eslintrc.cjs", "vite.config.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "files": [],
+  "include": [".eslintrc.cjs"],
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
+  "x-comment": {
+    "comments": [
+      "from previous tsconfig.json, in case something stops working...",
+      "Also, not sure where .eslintrc.cjs should be included, or why. TODO: investigate"
+    ],
+    "compilerOptions": {
+      "esModuleInterop": false,
+      "allowSyntheticDefaultImports": true,
+      "resolveJsonModule": true
+    }
+  }
 }
